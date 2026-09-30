@@ -1,0 +1,27 @@
+.lavish-site .quote-shell{max-width:1400px;margin:auto;padding:40px 4.2% 80px}
+.lavish-site .quote-shell h1{font-size:clamp(54px,6vw,82px);margin:18px 0 22px}
+.lavish-site .quote-intro{color:var(--muted);max-width:550px;margin-bottom:40px}
+.lavish-site .quote-layout{display:grid;grid-template-columns:1fr 43%;gap:7%;align-items:start}
+.lavish-site .quote-list-heading{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;font-size:13px}
+.lavish-site .quote-row{display:grid;grid-template-columns:95px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
+.lavish-site .quote-row img{width:95px;height:95px;object-fit:contain;background:white}
+.lavish-site .quote-row h3{font-size:21px;line-height:1.25;margin-bottom:12px}
+.lavish-site .quote-row-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px}
+.lavish-site .quote-row input{width:66px;padding:8px;background:transparent;border:1px solid var(--line);min-height:44px}
+.lavish-site .quote-remove{padding:10px;border:0;background:transparent;text-decoration:underline;min-height:44px;margin-left:auto}
+.lavish-site .quote-help{font-size:13px;color:var(--muted);margin-top:20px}
+.lavish-site .quote-form{padding:30px;background:var(--sage)}
+.lavish-site .quote-form h2{font-size:36px;margin:10px 0 20px}
+.lavish-site .quote-form .field{margin-bottom:18px}
+.lavish-site .quote-form input,.lavish-site .quote-form textarea{background:var(--paper)}
+.lavish-site .quote-form button[type=submit]{width:100%;margin-top:10px}
+.lavish-site .quote-empty{background:var(--sage);text-align:center;padding:45px 25px}
+.lavish-site .quote-empty h2{font-size:36px;margin-bottom:18px}
+.lavish-site .quote-empty .button{margin-top:25px}
+.lavish-site .quote-review{max-width:650px;width:calc(100% - 40px);border:0;padding:45px;background:var(--paper);color:var(--ink)}
+.lavish-site .quote-review::backdrop{background:rgba(20,25,20,.7)}
+.lavish-site .quote-review h2{font-size:42px;margin:15px 0 20px}
+.lavish-site .quote-review pre{white-space:pre-wrap;font:inherit;font-size:14px;background:var(--sage);padding:20px;max-height:40vh;overflow:auto;margin:20px 0}
+.lavish-site .quote-review>p{font-size:14px;color:var(--muted)}
+@media(max-width:800px){.lavish-site .quote-layout{display:block}.lavish-site .quote-form{margin-top:35px}}
+@media(max-width:640px){.lavish-site .quote-shell{padding:25px 20px 45px}.lavish-site .quote-shell h1{font-size:58px}.lavish-site .quote-form{padding:24px 20px}.lavish-site .quote-row{gap:16px;grid-template-columns:80px 1fr}.lavish-site .quote-row img{width:80px;height:85px}.lavish-site .quote-row h3{font-size:18px}.lavish-site .quote-review{padding:40px 22px 25px}}

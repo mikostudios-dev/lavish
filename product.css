@@ -1,0 +1,41 @@
+.lavish-site .product-shell{max-width:1600px;margin:auto;padding:35px 4.2% 70px}
+.lavish-site .product-shell .breadcrumbs{flex-wrap:wrap;margin-bottom:35px}
+.lavish-site .product-layout{display:grid;grid-template-columns:57% 1fr;gap:6%;align-items:start}
+.lavish-site .gallery-main{position:relative;display:block;width:100%;padding:0;border:0;background:#fff}
+.lavish-site .gallery-main>img{width:100%;height:auto;aspect-ratio:1.2;object-fit:contain}
+.lavish-site .gallery-main>span{position:absolute;bottom:18px;right:18px;background:var(--paper);padding:11px 14px;font-size:10px;letter-spacing:.1em;display:flex;align-items:center;gap:25px}
+.lavish-site .gallery-main>span>span{font-size:21px}
+.lavish-site .product-thumbnails{display:flex;align-items:center;gap:14px;margin-top:18px}
+.lavish-site .product-thumbnails button{background:white;padding:4px;border:1px solid var(--line);width:100px;min-height:64px}
+.lavish-site .product-thumbnails button[aria-pressed=true]{border:2px solid var(--ink);padding:3px}
+.lavish-site .product-thumbnails img{width:100%;height:62px;object-fit:contain}
+.lavish-site .product-thumbnails p{margin-left:auto;font-size:11px;letter-spacing:.12em;color:var(--muted)}
+.lavish-site .product-information{padding-top:15px}
+.lavish-site .product-information h1{font-size:clamp(52px,5.5vw,80px);margin:20px 0 25px}
+.lavish-site .product-description{color:var(--muted);font-size:17px;max-width:400px}
+.lavish-site .product-specs{margin:30px 0;border-top:1px solid var(--line)}
+.lavish-site .product-specs>div{display:grid;grid-template-columns:110px 1fr;gap:20px;border-bottom:1px solid var(--line);padding:15px 0;font-size:14px}
+.lavish-site .product-specs dt{color:var(--muted)}
+.lavish-site .product-specs dd{margin:0}
+.lavish-site .product-add>label{display:block;font-size:10px;letter-spacing:.13em;margin-bottom:10px}
+.lavish-site .quantity-add{display:flex;gap:12px}
+.lavish-site .quantity-control{display:flex;align-items:center;border:1px solid var(--line);flex:0 0 140px}
+.lavish-site .quantity-control button{border:0;background:transparent;min-width:40px;min-height:52px;font-size:22px}
+.lavish-site .quantity-control input{min-width:0;width:56px;text-align:center;appearance:textfield;background:transparent;border:0;padding:10px 0}
+.lavish-site .quantity-control input::-webkit-inner-spin-button{appearance:none}
+.lavish-site .quantity-add>.button{flex:1;padding:14px 18px;gap:12px}
+.lavish-site .product-demo{font-size:11px;color:var(--muted);margin-top:12px}
+.lavish-site .piece-confirmation{background:var(--sage);padding:16px;margin-top:20px;font-size:14px}
+.lavish-site .piece-confirmation p{margin-bottom:4px}
+.lavish-site .availability-note{font-size:13px;margin-top:22px;color:var(--muted)}
+.lavish-site .product-source{display:inline-block;margin-top:12px;font-size:12px;text-decoration:underline;text-underline-offset:4px;min-height:44px;padding-top:8px}
+.lavish-site .product-next{border-top:1px solid var(--line);margin-top:70px;padding-top:40px;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.lavish-site .product-next>div{margin-right:auto}
+.lavish-site .product-next h2{font-size:36px;margin-top:12px}
+.lavish-site .photo-dialog{width:calc(100% - 40px);max-width:1000px;border:0;padding:20px;background:var(--paper);color:var(--ink)}
+.lavish-site .photo-dialog::backdrop{background:rgba(20,25,20,.75)}
+.lavish-site .photo-dialog>img{width:100%;height:70vh;object-fit:contain;background:white}
+.lavish-site .photo-navigation{display:flex;justify-content:center;gap:30px;align-items:center;margin-top:10px}
+.lavish-site .photo-navigation button{border:1px solid var(--line);background:transparent;width:48px;height:48px;font-size:23px}
+@media(max-width:1000px){.lavish-site .product-layout{grid-template-columns:52% 1fr;gap:4%}.lavish-site .quantity-add{flex-wrap:wrap}.lavish-site .quantity-add>.button{min-width:190px}.lavish-site .product-information h1{font-size:56px}}
+@media(max-width:640px){.lavish-site .product-shell{padding:24px 20px 45px}.lavish-site .product-shell .breadcrumbs{font-size:11px;gap:8px;margin-bottom:22px}.lavish-site .product-layout{display:block}.lavish-site .gallery-main>img{aspect-ratio:1.25}.lavish-site .product-thumbnails{gap:10px}.lavish-site .product-thumbnails button{width:77px;min-height:58px}.lavish-site .product-thumbnails img{height:50px}.lavish-site .product-information{padding-top:35px}.lavish-site .product-information h1{font-size:58px;margin:16px 0 20px}.lavish-site .product-description{font-size:16px}.lavish-site .quantity-control{flex-basis:130px}.lavish-site .quantity-add{flex-wrap:nowrap;gap:10px}.lavish-site .quantity-add>.button{min-width:0;font-size:13px;padding:12px;gap:8px}.lavish-site .product-next{margin-top:40px;gap:20px}.lavish-site .product-next h2{font-size:34px}.lavish-site .photo-dialog{padding:12px}.lavish-site .photo-dialog>img{height:55vh}}
