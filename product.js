@@ -8,7 +8,7 @@
  document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))closeMenu()});
  window.matchMedia('(min-width:901px)').addEventListener('change',closeMenu);
  let photo=1;const dialog=$('#photo-dialog'),thumbs=[...document.querySelectorAll('[data-photo]')];
- function showPhoto(n){photo=(n+1)%2+1;const src=`assets/abundant-chair/abundant-${photo}.webp`,alt=`Abundant Chair · photograph ${photo} of 2`;
+ function showPhoto(n){photo=(n+1)%2+1;const src=`assets/abundant-chair/abundant-${photo}.webp`,alt=photo===1?'Abundant bouclé armchair with beech wood legs, three-quarter view':'Abundant bouclé armchair, front view';
   $('#main-photo').src=src;$('#main-photo').alt=alt;$('#enlarged-photo').src=src;$('#enlarged-photo').alt=alt;
   thumbs.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.photo)===photo)));
   $('#photo-counter').textContent=`0${photo} / 02`;$('#enlarged-count').textContent=`${photo} / 2`;
