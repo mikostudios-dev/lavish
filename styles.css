@@ -69,7 +69,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .collection-card:hover .circle-arrow{background:var(--yellow);border-color:var(--yellow)}
 .lavish-site .collection-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:38px;padding-top:24px}
 .lavish-site .collection-bottom p{font-size:15px;color:var(--muted)}
-.lavish-site .approach{display:grid;grid-template-columns:1fr 1fr;background:var(--yellow)}
+.lavish-site .approach{display:grid;grid-template-columns:1fr 1fr;background:#A3A4A3}
 .lavish-site .approach-photo{min-height:620px;overflow:hidden}
 .lavish-site .approach-photo img{height:100%;width:100%;object-fit:cover;object-position:30% center}
 .lavish-site .approach-copy{padding:68px 12% 45px 11%;display:flex;align-items:flex-start;flex-direction:column;max-width:760px}
@@ -202,3 +202,6 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .breadcrumbs a:hover,.lavish-site a.product-source:hover,.lavish-site .mobile-menu a:hover,.lavish-site .desktop-nav a:hover,.lavish-site .footer-grid a:hover,.lavish-site .footer-bottom a:hover{color:var(--yellow)}
 .lavish-site a.collection-card:hover .card-label>span:first-child,.lavish-site a.product-open:hover .product-name{color:var(--yellow)}
 .lavish-site a.button-yellow:not([aria-disabled=true]):hover{background:var(--yellow);color:var(--ink)}
+
+/* Outline only the custom-capabilities CTA against its yellow section. */
+.lavish-site .custom-banner .custom-description>a.button-dark:not([aria-disabled=true]):hover{border-color:#000}
