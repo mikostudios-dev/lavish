@@ -1,11 +1,14 @@
+/* Official Instrument Serif regular/italic. License: assets/instrument-serif/OFL.txt. */
+@font-face{font-family:'Instrument Serif';src:url('assets/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url('assets/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:Lavish Proxima;src:url('assets/proximanova-regular-webfont.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 /* Global tokens. All component selectors live within the lavish-site namespace. */
-.lavish-site{--paper:#f7f6f1;--ink:#292d28;--muted:#62665e;--line:#d5d6cb;--yellow:#f2e958;--sage:#e6e9dc;--serif:Georgia,'Times New Roman',serif;--sans:'Lavish Proxima',Arial,sans-serif;margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.lavish-site{--paper:#f7f6f1;--ink:#292d28;--muted:#62665e;--line:#d5d6cb;--yellow:#f2e958;--sage:#e6e9dc;--serif:Georgia,'Times New Roman',serif;--heading-serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Lavish Proxima',Arial,sans-serif;margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .lavish-site *,.lavish-site *::before,.lavish-site *::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site h1,.lavish-site h2,.lavish-site h3,.lavish-site p,.lavish-site figure{margin:0}
 .lavish-site h1,.lavish-site h2,.lavish-site h3{font-weight:400}
-.lavish-site h1,.lavish-site h2{font-family:var(--serif);line-height:1.05;letter-spacing:-.047em}
+.lavish-site h1,.lavish-site h2{font-family:var(--heading-serif);line-height:1.05;letter-spacing:-.047em}
 .lavish-site h2{font-size:clamp(42px,4.3vw,62px)}
 .lavish-site em{font-weight:400}
 .lavish-site img{max-width:100%;display:block}
@@ -82,7 +85,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .event-image:hover img{transform:scale(1.035)}
 .lavish-site .image-action{position:absolute;bottom:18px;right:18px;font-size:10px;letter-spacing:.13em;background:var(--paper);padding:12px 15px}
 .lavish-site .event-card figcaption{padding-top:23px}
-.lavish-site .event-card h3{font-family:var(--serif);font-size:33px;letter-spacing:-.04em;margin:7px 0 9px}
+.lavish-site .event-card h3{font-family:var(--heading-serif);font-size:33px;letter-spacing:-.04em;margin:7px 0 9px}
 .lavish-site .event-card figcaption>p{font-size:12px;line-height:1.65;color:var(--muted)}
 .lavish-site .custom-banner{background:var(--yellow);padding:57px 6%;display:grid;grid-template-columns:100px 1fr 1fr;align-items:center;gap:35px}
 .lavish-site .custom-symbol{font-size:115px;line-height:1;transform:rotate(11deg)}
@@ -119,7 +122,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .faq-link{margin-top:24px}
 .lavish-site .site-footer{background:var(--ink);color:#f0f0e6;padding:66px 4.2% 0}
 .lavish-site .footer-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:58px;border-bottom:1px solid #52584b}
-.lavish-site .footer-statement{font-family:var(--serif);font-size:clamp(42px,4.9vw,72px);letter-spacing:-.04em;line-height:1.08;position:relative}
+.lavish-site .footer-statement{font-family:var(--heading-serif);font-size:clamp(42px,4.9vw,72px);letter-spacing:-.04em;line-height:1.08;position:relative}
 
 .lavish-site .footer-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr .8fr;gap:40px;padding:49px 0 55px;font-size:14px}
 .lavish-site .footer-brand{display:block;width:137px;margin-top:-4px}
@@ -173,3 +176,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 @media print{.lavish-site .site-header{position:static}.lavish-site .location-bar,.lavish-site .menu-toggle,.lavish-site dialog{display:none}.lavish-site .section{break-inside:avoid}.lavish-site .site-footer{print-color-adjust:exact}}
 
 .lavish-site .header-cta [data-quote-count]:empty{display:none}
+
+/* Header case only; body type and logo remain unchanged. */
+.lavish-site .site-header a,.lavish-site .menu-toggle{text-transform:uppercase}
+.lavish-site h1,.lavish-site h2,.lavish-site .event-card h3,.lavish-site .footer-statement{font-synthesis:none;letter-spacing:-.02em}
