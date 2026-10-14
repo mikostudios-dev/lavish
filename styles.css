@@ -196,3 +196,10 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .custom-description{justify-self:start;max-width:360px;margin:0}
 @media(max-width:900px) and (min-width:641px){.lavish-site .custom-symbol{flex-basis:48px;font-size:60px}.lavish-site .custom-heading{gap:16px}}
 @media(max-width:640px){.lavish-site .custom-banner{padding:43px 24px}.lavish-site .custom-inner{display:block;max-width:440px}.lavish-site .custom-heading{justify-content:flex-start;text-align:left;gap:16px}.lavish-site .custom-symbol{display:none}.lavish-site .custom-description{margin-top:23px;max-width:none}}
+
+/* Link hover accents use the existing Lavish yellow; keep readable ink on light surfaces. */
+.lavish-site a.text-link:hover,.lavish-site .breadcrumbs a:hover,.lavish-site a.product-source:hover,.lavish-site .mobile-menu a:hover{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.lavish-site .desktop-nav a:hover::after{background:var(--yellow)}
+.lavish-site .footer-grid a:hover,.lavish-site .footer-bottom a:hover{color:var(--yellow)}
+.lavish-site a.button-yellow:not([aria-disabled=true]):hover{background:var(--yellow);color:var(--ink)}
+.lavish-site a.product-open:hover .product-arrow{background:var(--yellow);border-color:var(--yellow)}
