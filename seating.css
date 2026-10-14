@@ -54,3 +54,6 @@
 @media(max-width:640px){.lavish-site .catalog-context{display:block;padding:24px 0}.lavish-site .catalog-context h2{margin-bottom:16px}.lavish-site .catalog-intro h1{font-size:58px}}
 
 .lavish-site .catalog-search-help{font-size:11px;line-height:1.5;color:var(--muted);margin-top:8px}
+
+/* The selected category is also a dark button. */
+.lavish-site .filter-button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]):hover,.lavish-site .filter-button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]):focus-visible{background:var(--yellow);color:#000;border-color:var(--ink)}

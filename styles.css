@@ -25,7 +25,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .button span[aria-hidden]{font-size:23px;line-height:1}
 .lavish-site .button:hover{transform:translateY(-2px)}
 .lavish-site .button-dark{background:var(--ink);color:#fff}
-.lavish-site .button-dark:hover{background:#454d3f}
+.lavish-site .button-dark:not(:disabled):not([aria-disabled=true]):hover,.lavish-site .button-dark:not(:disabled):not([aria-disabled=true]):focus-visible{background:var(--yellow);color:#000}
 .lavish-site .button-yellow{background:var(--yellow);color:var(--ink)}
 .lavish-site .button-yellow:hover{background:#fff881}
 .lavish-site .text-link{display:inline-flex;align-items:center;gap:32px;border-bottom:1px solid var(--ink);padding:8px 0;font-size:15px;min-height:44px}
@@ -50,7 +50,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .hero-description{max-width:305px;color:var(--muted);font-size:18px;line-height:1.5;margin-bottom:28px}
 .lavish-site .hero-image{align-self:stretch;position:relative;background:#e8e6df;display:flex;flex-direction:column;margin-left:12px}
 .lavish-site .hero-image>img{width:100%;height:100%;min-height:430px;object-fit:cover;object-position:51% center;flex:1}
-.lavish-site .hero-image figcaption{display:flex;align-items:center;justify-content:space-between;padding:17px 29px;background:#e8e9df;font-size:9px;letter-spacing:.12em;min-height:63px}
+.lavish-site .hero-image figcaption{display:flex;align-items:center;justify-content:space-between;padding:17px 29px;background:var(--yellow);font-size:9px;letter-spacing:.12em;min-height:63px}
 .lavish-site .hero-image figcaption a{display:grid;place-content:center;width:40px;height:40px;font-size:27px;border:1px solid #a3a79b;border-radius:100%}
 .lavish-site .occasion-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:80px;margin:0 4.2%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:16px;letter-spacing:.025em}
 .lavish-site .occasion-strip b{font-size:19px;font-weight:400;color:#80866d}
@@ -182,3 +182,17 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 
 /* Helvetica uses installed system fonts; no commercial font binary is shipped. */
 .lavish-site .site-header a{font-family:var(--sans)}
+
+/* Approved CTA presentation: preserve wording and disabled states. */
+.lavish-site .button,.lavish-site button.text-link,.lavish-site .text-button,.lavish-site .filter-button,.lavish-site .reset-filters,.lavish-site .quote-remove{text-transform:uppercase}
+.lavish-site .button-dark:not(:disabled):not([aria-disabled=true]):focus-visible,.lavish-site .filter-button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]):focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--paper)}
+
+/* Center the custom capabilities content around a balanced two-column gutter. */
+.lavish-site .custom-banner{display:block;padding:57px 4.2%}
+.lavish-site .custom-inner{max-width:1040px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center}
+.lavish-site .custom-heading{display:flex;align-items:center;justify-content:flex-end;gap:24px;text-align:right;min-width:0}
+.lavish-site .custom-symbol{display:block;flex:0 0 72px;font-size:80px;line-height:1}
+.lavish-site .custom-title-group{min-width:0}
+.lavish-site .custom-description{justify-self:start;max-width:360px;margin:0}
+@media(max-width:900px) and (min-width:641px){.lavish-site .custom-symbol{flex-basis:48px;font-size:60px}.lavish-site .custom-heading{gap:16px}}
+@media(max-width:640px){.lavish-site .custom-banner{padding:43px 24px}.lavish-site .custom-inner{display:block;max-width:440px}.lavish-site .custom-heading{justify-content:flex-start;text-align:left;gap:16px}.lavish-site .custom-symbol{display:none}.lavish-site .custom-description{margin-top:23px;max-width:none}}
