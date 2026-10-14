@@ -14,9 +14,9 @@
 .lavish-site .filter-button{background:transparent;border:1px solid var(--line);border-radius:30px;padding:10px 17px;min-height:44px;font-size:14px;transition:background .15s}
 .lavish-site .filter-button:hover{background:var(--sage)}
 .lavish-site .filter-button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}
-.lavish-site .catalog-search{flex:0 0 235px}
+.lavish-site .catalog-search{flex:0 0 235px;margin-top:25px}
 .lavish-site .catalog-search label{display:block;font-size:10px;letter-spacing:.14em;margin-bottom:10px}
-.lavish-site .catalog-search input{width:100%;background:transparent;border:1px solid var(--line);padding:11px 14px;min-height:44px;border-radius:0}
+.lavish-site .catalog-search input{width:100%;background:transparent;border:1px solid var(--line);padding:10px 14px;height:44px;min-height:44px;font-size:14px;line-height:1.5;border-radius:0}
 .lavish-site .catalog-results{display:flex;justify-content:space-between;gap:20px;padding:22px 0;color:var(--muted);font-size:13px;align-items:center}
 .lavish-site .reset-filters{background:transparent;border:0;text-decoration:underline;text-underline-offset:4px;padding:8px;min-height:44px}
 .lavish-site .product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 22px}
