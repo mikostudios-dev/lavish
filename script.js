@@ -43,7 +43,7 @@
     $('#collection-dialog-image').src=`assets/${activeCollection.image}.webp`;
     $('#collection-dialog-image').alt=button.querySelector('img').alt;
     const list=$('#collection-dialog-links'); list.replaceChildren();
-    activeCollection.links.forEach(([label,path])=> { const li=document.createElement('li');const a=document.createElement('a'); a.href=site+path; a.textContent=label+' ↗';a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' on the current Lavish website (new tab)');li.append(a);list.append(li); });
+    activeCollection.links.forEach(([label,path])=> { const li=document.createElement('li');const a=document.createElement('a'); a.href=site+path; a.textContent=label;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' on the current Lavish website (new tab)');li.append(a);list.append(li); });
     $('#add-category').disabled=chosen.has(activeCollection.name);
     $('#add-category').textContent=chosen.has(activeCollection.name)?'Added to your event ✓':'Add to my event +';
     openDialog($('#collection-dialog'));

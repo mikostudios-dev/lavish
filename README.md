@@ -17,3 +17,7 @@ Run `python3 -m http.server 8766` in this folder and open `http://127.0.0.1:8766
 Reuse the shared header/footer and CSS components. Replace static cards with the existing product taxonomy/query and verified product fields. Connect the final quote request to the approved inquiry workflow, validating product IDs and quantities server-side. Show delivery success only after the actual submission succeeds. The source website uses a custom WordPress theme; no page builder is assumed.
 
 Photos, logo, product names and dimensions originate from the public Lavish Event Rentals website. The catalog is a presentation snapshot, not an availability feed. This is a client design concept, not the live Lavish website.
+
+
+## Collection search
+Seating searches product names, public catalog descriptions and published details in place, combined with category filters. The source text is a dated snapshot; missing descriptions do not imply inferred materials. Refresh from verified product fields during the WordPress migration.

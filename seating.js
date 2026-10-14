@@ -10,11 +10,19 @@
  window.matchMedia('(min-width:901px)').addEventListener('change',closeMenu);
  const cards=[...document.querySelectorAll('.product-card')],filters=[...document.querySelectorAll('[data-filter]')],search=$('#product-search'),dialog=$('#product-dialog');
  let category='all',limit=24,previousFocus,activeQuotePiece;
+ // Index only source text and existing attributes. Never infer materials from photos.
+ const normalize=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const catalog=window.LAVISH_SEATING_SEARCH||{};
+ const searchIndex=new Map(cards.map(card=>{
+  const published=catalog[card.dataset.url]||{};
+  const existing=['description','material','materials','attributes','color','finish'].map(key=>card.dataset[key]||'');
+  return [card,normalize([card.dataset.name,published.description,...(published.attributes||[]),...existing].join(' '))];
+ }));
  const params=new URLSearchParams(location.search);const requested=params.get('category');
  if(filters.some(b=>b.dataset.filter===requested))category=requested;
  function update(){
-  const query=search.value.trim().toLowerCase();
-  const matched=cards.filter(card=>(category==='all'||card.dataset.categories.split(' ').includes(category))&&card.dataset.name.toLowerCase().includes(query));
+  const query=normalize(search.value.trim());const terms=query.split(/\s+/).filter(Boolean);
+  const matched=cards.filter(card=>(category==='all'||card.dataset.categories.split(' ').includes(category))&&terms.every(term=>searchIndex.get(card).includes(term)));
   const shown=new Set(matched.slice(0,limit));cards.forEach(card=>card.hidden=!shown.has(card));
   filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===category)));
   $('#results-count').textContent=`${matched.length} ${matched.length===1?'piece':'pieces'}${category==='all'?' in Seating':' · '+filters.find(b=>b.dataset.filter===category).textContent}`;
@@ -24,6 +32,7 @@
  }
  filters.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter;limit=24;update();const url=new URL(location.href);category==='all'?url.searchParams.delete('category'):url.searchParams.set('category',category);history.replaceState(null,'',url)}));
  search.addEventListener('input',()=>{limit=24;update()});
+ search.addEventListener('keydown',event=>{if(event.key==='Enter')event.preventDefault()});
  function reset(){category='all';search.value='';limit=24;update();history.replaceState(null,'',location.pathname);search.focus()}
  $('#reset-filters').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);
  $('#load-more').addEventListener('click',()=>{limit+=24;update()});

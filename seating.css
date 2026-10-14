@@ -52,3 +52,5 @@
 .lavish-site .catalog-context h2{font-size:clamp(30px,3vw,42px)}
 .lavish-site .catalog-context p{font-size:15px;color:var(--muted);line-height:1.65}
 @media(max-width:640px){.lavish-site .catalog-context{display:block;padding:24px 0}.lavish-site .catalog-context h2{margin-bottom:16px}.lavish-site .catalog-intro h1{font-size:58px}}
+
+.lavish-site .catalog-search-help{font-size:11px;line-height:1.5;color:var(--muted);margin-top:8px}
