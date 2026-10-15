@@ -218,3 +218,10 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .site-footer .footer-top>.button:not(:disabled):not([aria-disabled=true]):focus-visible{outline:3px solid var(--paper);outline-offset:3px}
 .lavish-site .approach-copy .approach-about-link{margin-top:16px}
 .lavish-site .inquiry-copy>.contact-page-link{display:flex;width:max-content;max-width:100%;margin-top:12px}
+
+/* Home inquiry only: black copy and a stable, accessible email link. */
+.lavish-site .home-inquiry{color:#000}
+.lavish-site .home-inquiry .inquiry-copy>p,.lavish-site .home-inquiry .inquiry-note,.lavish-site .home-inquiry .inquiry-note>.circle-arrow,.lavish-site .home-inquiry .form-demo,.lavish-site .home-inquiry .form-end>span,.lavish-site .home-inquiry .selection-status{color:#000}
+.lavish-site .home-inquiry input::placeholder,.lavish-site .home-inquiry textarea::placeholder{color:#000;opacity:1}
+.lavish-site .home-inquiry .inquiry-copy>a[href^="mailto:"]:hover,.lavish-site .home-inquiry .inquiry-copy>a[href^="mailto:"]:focus-visible{color:#000}
+.lavish-site .home-inquiry .inquiry-copy>a[href^="mailto:"]:focus-visible{outline:3px solid #000;outline-offset:5px}
