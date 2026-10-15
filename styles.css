@@ -211,3 +211,10 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .inquiry-form input:focus,.lavish-site .inquiry-form select:focus,.lavish-site .inquiry-form textarea:focus{outline:3px solid #000;outline-offset:5px;border-bottom-color:#000}
 
 .lavish-site .collection-card .bars-card-image{object-position:50% 50%}
+
+/* Footer CTA: inverse of the custom-banner CTA; retain the reserved1px border. */
+.lavish-site .site-footer .footer-top>.button{background:var(--paper);color:var(--ink)}
+.lavish-site .site-footer .footer-top>.button:not(:disabled):not([aria-disabled=true]):hover,.lavish-site .site-footer .footer-top>.button:not(:disabled):not([aria-disabled=true]):focus-visible{background:var(--ink);color:var(--paper);border-color:var(--paper)}
+.lavish-site .site-footer .footer-top>.button:not(:disabled):not([aria-disabled=true]):focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+.lavish-site .approach-copy .approach-about-link{margin-top:16px}
+.lavish-site .inquiry-copy>.contact-page-link{display:flex;width:max-content;max-width:100%;margin-top:12px}

@@ -1,0 +1,234 @@
+{
+  "captured": "2026-10-15",
+  "selection": "12 full-size images verified on the public Lavish WordPress gallery. Proportional WebP encoding only; no generated or altered scenes.",
+  "images": [
+    {
+      "id": "event-01",
+      "title": "South Beach Wine & Food Festival",
+      "alt": "White and orange lounge chairs beneath white parasols at a beach event",
+      "credit": "MasterCard Lounge, South Beach Wine & Food Festival \u2013 Event Design by First Agency",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/SOBE-Baseball-Lounge-1024x683.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        1024,
+        683
+      ],
+      "source_sha256": "9e9191abf5fceb8a1697be823a001e59cba2a288abb0099c4c1e017388694394",
+      "file": "assets/gallery/event-01.webp",
+      "small": "assets/gallery/event-01-480.webp",
+      "width": 1024,
+      "height": 683,
+      "small_width": 480,
+      "bytes": 112440
+    },
+    {
+      "id": "event-02",
+      "title": "The Rubell Gallery",
+      "alt": "A white round table and gray chairs beside a pink rose arrangement",
+      "credit": "JCS Alliance Donor Recognition Dinner, The Rubell Gallery \u2013 Event Design by J Group Events",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/J-Group-Events-at-The-Rubell-Gallery-683x1024.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        683,
+        1024
+      ],
+      "source_sha256": "149c3be787f030b2edc7b547822d68ddd153af53e0b70101cff72bbbde962ae9",
+      "file": "assets/gallery/event-02.webp",
+      "small": "assets/gallery/event-02-480.webp",
+      "width": 683,
+      "height": 1024,
+      "small_width": 480,
+      "bytes": 117946
+    },
+    {
+      "id": "event-03",
+      "title": "Art Basel, Design District",
+      "alt": "A long white dining table with clear chairs and pale flowers in a gallery",
+      "credit": "Art Basel Private Dinner, Design District \u2013 Event Design by SOJO Designs",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/SOJO-1024x683.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        1024,
+        683
+      ],
+      "source_sha256": "d20f688aaba1870a39e39593e3b9ec0674c65e3972c5c07bee9dc55bd141f068",
+      "file": "assets/gallery/event-03.webp",
+      "small": "assets/gallery/event-03-480.webp",
+      "width": 1024,
+      "height": 683,
+      "small_width": 480,
+      "bytes": 134052
+    },
+    {
+      "id": "event-04",
+      "title": "Miami Ironside Wedding",
+      "alt": "A wedding cake on a white pedestal under a curved floral installation",
+      "credit": "Wedding, Miami Ironside \u2013 Event Design by Roxanne Bellamy ",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2016/07/11.Roxanne-Bellamy-Miami-Ironside.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        640,
+        960
+      ],
+      "source_sha256": "bef75310099208a7f98decd693a9abfe7dd075887a98aa2aabec14e272440837",
+      "file": "assets/gallery/event-04.webp",
+      "small": "assets/gallery/event-04-480.webp",
+      "width": 640,
+      "height": 960,
+      "small_width": 480,
+      "bytes": 76384
+    },
+    {
+      "id": "event-05",
+      "title": "Pompano Beach Air Park",
+      "alt": "A long dinner table with carefully arranged glassware and place settings",
+      "credit": "Breitling Dinner, Pompano Beach Air Park",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2016/07/16.Breitling-PB-Hangar.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        950,
+        634
+      ],
+      "source_sha256": "15f3c1b96299a79a0f61b607760fd5e7e65590096a91c8ea4696d3867fcb90ff",
+      "file": "assets/gallery/event-05.webp",
+      "small": "assets/gallery/event-05-480.webp",
+      "width": 950,
+      "height": 634,
+      "small_width": 480,
+      "bytes": 57096
+    },
+    {
+      "id": "event-06",
+      "title": "The Temple House",
+      "alt": "White cocktail tables and transparent barstools in a bright event space",
+      "credit": "Corporate Gala, The Temple House",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2017/05/Temple-House-1024x683.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        1024,
+        683
+      ],
+      "source_sha256": "93bba3a6ccdcd6466dd332d512570e179ef07b2889f9bb179fa5f821721035a7",
+      "file": "assets/gallery/event-06.webp",
+      "small": "assets/gallery/event-06-480.webp",
+      "width": 1024,
+      "height": 683,
+      "small_width": 480,
+      "bytes": 53388
+    },
+    {
+      "id": "event-07",
+      "title": "Mandarin Oriental Wedding",
+      "alt": "Candlelit wedding tables with tall white flowers and reflective gold details",
+      "credit": "Lima Mederos Wedding, Mandarin Oriental \u2013 Event Design by Karla | Photography by Maloman Studios",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2016/07/8.Lima-Wedding-Mandarin2.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        950,
+        663
+      ],
+      "source_sha256": "56bb941d1c4a136d15b8cceaa124944d3c75e7b9ebf65e9fd581e260269b671c",
+      "file": "assets/gallery/event-07.webp",
+      "small": "assets/gallery/event-07-480.webp",
+      "width": 950,
+      "height": 663,
+      "small_width": 480,
+      "bytes": 147772
+    },
+    {
+      "id": "event-08",
+      "title": "Waldorf Astoria Orlando",
+      "alt": "Lounge armchairs and coffee tables arranged on patterned carpet",
+      "credit": "ProBowl Lounge, Waldorf Astoria Orlando \u2013 Event Design by Nimblist",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/ProBowl-Lounge-Waldorf-Astoria-Orlando-Event-Design-by-Nimblist-1024x563.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        1024,
+        563
+      ],
+      "source_sha256": "9800048c1bf6eec3a6f32dc688489f2fa45b3cb5dc1ec8cde4a5820a1d051cc6",
+      "file": "assets/gallery/event-08.webp",
+      "small": "assets/gallery/event-08-480.webp",
+      "width": 1024,
+      "height": 563,
+      "small_width": 480,
+      "bytes": 133726
+    },
+    {
+      "id": "event-09",
+      "title": "Louis Vuitton, Design District",
+      "alt": "White lounge furniture and a sculptural table against colorful murals",
+      "credit": "Louis Vuitton Design District Grand Opening \u2013 Event Design by Shiraz Events",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/112.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        950,
+        633
+      ],
+      "source_sha256": "5860b94d605aede6c988e32a737cec9ef6852f810688e50aedc73a1bd7f1f7bd",
+      "file": "assets/gallery/event-09.webp",
+      "small": "assets/gallery/event-09-480.webp",
+      "width": 950,
+      "height": 633,
+      "small_width": 480,
+      "bytes": 75974
+    },
+    {
+      "id": "event-10",
+      "title": "PAMM Dinner",
+      "alt": "Brightly colored dining chairs around long tables at an evening event",
+      "credit": "Fox Media Dinner, PAMM \u2013 Event Design by A-List Events",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2016/07/22.A-List-Events-PAMM2.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        640,
+        960
+      ],
+      "source_sha256": "08748c5420b34a1977f8b38676c67d512419a2eff09d9fe510ce634e07141e14",
+      "file": "assets/gallery/event-10.webp",
+      "small": "assets/gallery/event-10-480.webp",
+      "width": 640,
+      "height": 960,
+      "small_width": 480,
+      "bytes": 162742
+    },
+    {
+      "id": "event-11",
+      "title": "The Breakers",
+      "alt": "White lounge furniture with tropical flowers and purple-lit palm trees",
+      "credit": "Albrecht Events,  The Breakers",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2016/07/17.Albrecht-Events-Breakers.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        950,
+        634
+      ],
+      "source_sha256": "222e0d6cc204b0fbf8e9d95b3b651543ea94d0dccb1c970214b946ccb7f8405b",
+      "file": "assets/gallery/event-11.webp",
+      "small": "assets/gallery/event-11-480.webp",
+      "width": 950,
+      "height": 634,
+      "small_width": 480,
+      "bytes": 157004
+    },
+    {
+      "id": "event-12",
+      "title": "DuPont Building",
+      "alt": "Green event chairs in a light-filled hall with tall columns",
+      "credit": "Elite Bridal Network, DuPont Building",
+      "source_url": "https://www.lavisheventrentals.com/wp-content/uploads/2013/06/131.jpg",
+      "source_page": "https://www.lavisheventrentals.com/photo-gallery/",
+      "original_dimensions": [
+        636,
+        954
+      ],
+      "source_sha256": "aad0efdec0853fb915db79d4897fb9dcf6ecbff1cec3510417f3afb90ba1ee18",
+      "file": "assets/gallery/event-12.webp",
+      "small": "assets/gallery/event-12-480.webp",
+      "width": 636,
+      "height": 954,
+      "small_width": 480,
+      "bytes": 109370
+    }
+  ]
+}
