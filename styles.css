@@ -227,8 +227,9 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 .lavish-site .home-inquiry .inquiry-copy>a[href^="mailto:"]:focus-visible{outline:3px solid #000;outline-offset:5px}
 
 /* Ordinary text links retain their normal colors on hover and keyboard focus. */
-.lavish-site a.text-link:is(:hover,:focus-visible){border-color:transparent;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:5px}
-.lavish-site :is(.breadcrumbs,.inner-breadcrumbs,.footer-grid,.footer-bottom,.location-bar,.collection-dialog li) a:not(.footer-brand):is(:hover,:focus-visible),.lavish-site a:is(.product-source,.location-phone):is(:hover,:focus-visible){text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.lavish-site a.text-link{transition:border-bottom-color .18s ease}
+.lavish-site a.text-link:is(:hover,:focus-visible){border-bottom-color:currentColor;text-decoration-line:none}
+.lavish-site :is(.breadcrumbs,.inner-breadcrumbs,.footer-grid,.footer-bottom,.location-bar,.collection-dialog li) a:not(.footer-brand):not(.text-link):is(:hover,:focus-visible),.lavish-site a:is(.product-source,.location-phone):is(:hover,:focus-visible){text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:5px}
 .lavish-site .desktop-nav a:focus-visible::after{right:0}
 .lavish-site .mobile-menu a:focus-visible{border-bottom-color:var(--ink)}
 .lavish-site a:not(.button):not(.collection-card):not(.product-open):not(.brand):not(.footer-brand):not(.skip-link):focus-visible{outline:3px solid currentColor;outline-offset:5px}
