@@ -200,7 +200,7 @@ html{scroll-behavior:smooth;scroll-padding-top:105px}
 /* Text-link hover changes text color only, as approved. */
 .lavish-site a.text-link:hover{color:var(--yellow);border-color:var(--ink)}
 .lavish-site .breadcrumbs a:hover,.lavish-site a.product-source:hover,.lavish-site .footer-grid a:hover,.lavish-site .footer-bottom a:hover{color:var(--yellow)}
-.lavish-site a.product-open:hover .product-name{color:var(--yellow)}
+
 .lavish-site a.button-yellow:not([aria-disabled=true]):hover{background:var(--yellow);color:var(--ink)}
 
 /* Outline only the custom-capabilities CTA against its yellow section. */
