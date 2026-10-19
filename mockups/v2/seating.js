@@ -1,0 +1,56 @@
+/* Local presentation only. Catalog filtering never contacts WordPress. */
+(() => {
+ 'use strict';
+ const $=s=>document.querySelector(s);
+ const menu=$('#mobile-menu'),toggle=$('.menu-toggle');
+ function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false')}
+ toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open))});
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))closeMenu()});
+ window.matchMedia('(min-width:901px)').addEventListener('change',closeMenu);
+ const cards=[...document.querySelectorAll('.product-card')],filters=[...document.querySelectorAll('[data-filter]')],search=$('#product-search'),dialog=$('#product-dialog');
+ const colorFilter=$('#color-filter'),materialFilter=$('#material-filter');
+ let category='all',limit=24,previousFocus,activeQuotePiece;
+ // Index only source text and existing attributes. Never infer materials from photos.
+ const normalize=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const catalog=window.LAVISH_SEATING_SEARCH||{};
+ const searchIndex=new Map(cards.map(card=>{
+  const published=catalog[card.dataset.url]||{};
+  const existing=['description','material','materials','attributes','color','finish'].map(key=>card.dataset[key]||'');
+  return [card,normalize([card.dataset.name,published.description,...(published.attributes||[]),...existing].join(' '))];
+ }));
+ const attributeOptions={color:[['Black','black'],['White','white'],['Blue','blue'],['Green','green'],['Pink','pink'],['Red','red'],['Orange','orange'],['Yellow','yellow'],['Ivory','ivory'],['Gray','gray']],material:[['Wood','wood'],['Velvet','velvet'],['Leather','leather'],['Metal','metal'],['Acrylic','acrylic'],['Rattan','rattan'],['Bouclé','boucle']]};
+ Object.entries(attributeOptions).forEach(([kind,options])=>{const select=kind==='color'?colorFilter:materialFilter;options.filter(([,term])=>[...searchIndex.values()].some(text=>text.includes(term))).forEach(([label,term])=>{const o=document.createElement('option');o.value=term;o.textContent=label;select.append(o)});select.addEventListener('change',()=>{limit=24;update()})});
+ const params=new URLSearchParams(location.search);const requested=params.get('category');
+ if(filters.some(b=>b.dataset.filter===requested))category=requested;
+ function update(){
+  const query=normalize(search.value.trim());const terms=[...query.split(/\s+/),colorFilter.value,materialFilter.value].filter(Boolean);
+  const matched=cards.filter(card=>(category==='all'||card.dataset.categories.split(' ').includes(category))&&terms.every(term=>searchIndex.get(card).includes(term)));
+  const shown=new Set(matched.slice(0,limit));cards.forEach(card=>card.hidden=!shown.has(card));
+  filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===category)));
+  $('#results-count').textContent=`${matched.length} ${matched.length===1?'piece':'pieces'}${category==='all'?' in Seating':' · '+filters.find(b=>b.dataset.filter===category).textContent}`;
+  $('#shown-count').textContent=`Showing ${shown.size} of ${matched.length} pieces`;
+  $('#load-more').hidden=shown.size>=matched.length;$('#catalog-empty').hidden=matched.length!==0;
+  $('#reset-filters').hidden=category==='all'&&!query&&!colorFilter.value&&!materialFilter.value;
+ }
+ filters.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter;limit=24;update();const url=new URL(location.href);category==='all'?url.searchParams.delete('category'):url.searchParams.set('category',category);history.replaceState(null,'',url)}));
+ search.addEventListener('input',()=>{limit=24;update()});
+ search.addEventListener('keydown',event=>{if(event.key==='Enter')event.preventDefault()});
+ function reset(){category='all';search.value='';colorFilter.value='';materialFilter.value='';limit=24;update();history.replaceState(null,'',location.pathname);search.focus()}
+ $('#reset-filters').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);
+ $('#load-more').addEventListener('click',()=>{limit+=24;update()});
+ cards.forEach(card=>card.querySelector('button')?.addEventListener('click',()=>{
+  previousFocus=document.activeElement;const name=card.dataset.name;
+  $('#product-title').textContent=name;$('#product-type').textContent=card.querySelector('.product-category').textContent;
+  $('#product-image').src=card.querySelector('img').src;$('#product-image').alt=name;
+  $('#original-product').href=card.dataset.url;
+  activeQuotePiece={id:card.dataset.url.split('/').filter(Boolean).pop(),name,image:card.querySelector('img').getAttribute('src'),quantity:1};
+  dialog.showModal();document.body.style.overflow='hidden';
+ }));
+ $('#product-inquiry').addEventListener('click',e=>{e.preventDefault();try{window.LavishQuote.add(activeQuotePiece);location.href='quote.html'}catch(error){$('#product-title').textContent=error.message}});
+ $('#close-product').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('close',()=>{document.body.style.overflow='';previousFocus?.focus({preventScroll:true})});
+ dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))dialog.close()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){closeMenu();toggle.focus()}});
+ update();
+})();
