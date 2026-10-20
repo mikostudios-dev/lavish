@@ -14,7 +14,7 @@
 .lavish-site .eyebrow{font-size:10px;letter-spacing:.16em;font-weight:500}
 .lavish-site .editorial-intro{padding:62px 4.2% 54px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;max-width:1800px;margin:auto}
 .lavish-site .editorial-intro h1{font-size:var(--title-size);line-height:.98;margin-top:24px;letter-spacing:-.035em}
-.lavish-site .editorial-intro h1 em{font-style:italic}
+.lavish-site .editorial-intro h1 em{font-style:normal}
 .lavish-site .intro-aside{padding-bottom:6px;flex-shrink:0}
 .lavish-site .intro-aside p{font-size:19px;line-height:1.45;margin-bottom:28px}
 .lavish-site .panorama{margin:0 4.2%;position:relative}
@@ -132,9 +132,9 @@
 
 /* Compact, fluid title hierarchy shared by every Concept 02 page. */
 .lavish-site {
-  --title-size: clamp(32px, 3.5vw, 54px);
-  --section-title-size: clamp(26px, 2.35vw, 36px);
-  --support-title-size: clamp(24px, 1.95vw, 30px);
+  --title-size: clamp(24px, 2vw, 28px);
+  --section-title-size: clamp(20px, 1.55vw, 22px);
+  --support-title-size: 20px;
 }
 .lavish-site .editorial-intro h1,
 .lavish-site .inner-hero h1,
@@ -157,6 +157,9 @@
   font-size: var(--section-title-size);
   line-height: 1.18;
 }
+.lavish-site .catalog-empty h2,
+.lavish-site .product-dialog h2,
+.lavish-site .photo-dialog h2,
 .lavish-site .category-copy h2,
 .lavish-site .catalog-context h2,
 .lavish-site .product-next h2,
@@ -167,4 +170,22 @@
 .lavish-site .lightbox-details h2 {
   font-size: var(--support-title-size);
   line-height: 1.2;
+}
+
+/* Quiet editorial typography lets the photographs lead. */
+.lavish-site h1 em,
+.lavish-site h2 em,
+.lavish-site .footer-statement em {
+  font-style: normal;
+  font-size: inherit;
+}
+.lavish-site .how-it-works h3 { font-size: 18px; }
+.lavish-site .editorial-statement>p:last-child { font-size: 16px; letter-spacing: 0; }
+.lavish-site .editorial-statement span { font-size: 14px; }
+.lavish-site .intro-aside p { font-size: 14px; }
+.lavish-site .editorial-intro { padding-block: 30px; }
+.lavish-site .editorial-intro h1 { margin-top: 14px; line-height: 1.3; }
+@media(max-width:640px) {
+  .lavish-site .editorial-intro { padding-block: 24px; }
+  .lavish-site .intro-aside p { font-size: 13px; }
 }
