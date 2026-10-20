@@ -31,3 +31,12 @@ Hero layers are intentionally framed photography, not extracted furniture preten
 
 ## Scope
 Home, 228-entry seating collection, representative Abundant Chair product detail, gallery, about, contact, local quote preview/download. Other products retain existing quick previews and quote actions. Category previews route to contact context. V4 storage key is lavish-quote-v4. No price display. Forms have disabled submit controls until local handlers load, preventing no-JS implicit submission. Original root, v2, v3 and comparison index are not edited.
+
+## Approved direction change: more spectacular v4
+The user liked v4 but requested a substantial redesign with much more motion and visual impact. This revision replaces the original natural-flow opening and one event reveal with two coordinated photographic scenes. It is still v4, with rollback available in git.
+
+New curve: curiosity (layered photographic installation) → immersion (the surrounding studies leave and the room expands) → choice (native category rail) → intimacy (chair study in perspective) → delight (three real events move through a dark photographic gallery) → resolve (still inquiry plate). The gallery is the longest scene at 300vh desktop; the opening is 245vh. Mobile shortens the hero to 190svh and converts the gallery to a vertical photographic sequence with mild perspective, eliminating the long pinned horizontal journey.
+
+New signature: the room opens out of a three-plane photographic installation, then the page changes to a walk past complete event photographs. All planes are clearly framed photographs, not fabricated cutout room geometry. Title and action occupy a separate stable white plane. Desktop gallery focus scrolls the relevant card into view; native wheel/touch behavior is not prevented. Pause is a persistent per-session user choice across the seven v4 pages; system reduced motion takes priority. No loops, video, generated imagery or new third-party execution.
+
+Device score: pinned perspective hero / native horizontal category pan / natural-flow chair rotation / scroll-driven horizontal gallery with per-panel perspective and scale / static inquiry. At smaller widths the gallery becomes natural vertical flow. Existing navigation, typography limits, quotations and data boundaries remain.

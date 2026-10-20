@@ -5,3 +5,6 @@ Independent image-first gallery concept at `mockups/v4/`. See `BRIEF.md` for the
 Uses existing local Lavish assets and content. `v4.css` and `v4.js` provide the distinct composition and motion; the copied v2 foundation preserves the catalog, product, gallery and local inquiry behaviors. No external libraries, analytics, generated assets, network submissions or public prices.
 
 Preview from repository root: `python3 -m http.server 8768 --bind 127.0.0.1`, then `/mockups/v4/`. Quote storage is isolated as `lavish-quote-v4`. Physical phone testing remains separate from browser viewport emulation.
+
+## Cinematic redesign
+The revised v4 replaces the opening with a pinned three-plane photographic installation, gives the chair more dimensional travel and introduces a dark horizontal event-photo journey. On phones the gallery flows vertically. A visible Pause motion / Play motion control remembers the choice for the session. Reduced-motion preference overrides it. No fifth concept or selector changes are included.

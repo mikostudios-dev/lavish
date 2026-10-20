@@ -1,23 +1,11 @@
-/* Independently authored; no scroll-craft runtime, libraries or remote requests. */
-(() => {
- 'use strict';
- document.querySelectorAll('[data-local-submit]').forEach(button => { button.disabled=false; });
- const preference=matchMedia('(prefers-reduced-motion: reduce)');
- const scenes=[...document.querySelectorAll('[data-motion]')];
- let queued=false;
- const clamp=n=>Math.max(0,Math.min(1,n));
- function draw(){
-  queued=false;
-  if(preference.matches)return;
-  const vh=innerHeight;
-  for(const el of scenes){
-   const r=el.getBoundingClientRect();
-   if(r.bottom<0||r.top>vh)continue;
-   const p=el.dataset.motion==='assembly'?clamp((88-r.top)/Math.max(r.height-vh,1)):el.dataset.motion==='opening'?clamp(-r.top/Math.max(r.height,1)):clamp((vh-r.top)/(vh+r.height));
-   el.style.setProperty('--p',p.toFixed(4));
-  }
- }
- function schedule(){if(!queued&&!document.hidden){queued=true;requestAnimationFrame(draw)}}
- function configure(){document.documentElement.classList.toggle('motion-ready',!preference.matches);scenes.forEach(el=>el.style.removeProperty('--p'));schedule()}
- addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});document.addEventListener('visibilitychange',schedule);preference.addEventListener('change',configure);configure();
-})();
+/* Independently authored photography choreography. Native scrolling only. */
+(()=>{'use strict';document.querySelectorAll('[data-local-submit]').forEach(b=>b.disabled=false);
+const preference=matchMedia('(prefers-reduced-motion: reduce)'),scenes=[...document.querySelectorAll('[data-motion]')],panels=[...document.querySelectorAll('.flight-panel')],button=document.querySelector('.motion-toggle');let paused=false,queued=false;try{paused=sessionStorage.getItem('lavish-v4-motion')==='paused'}catch{}
+const clamp=n=>Math.max(0,Math.min(1,n));const active=()=>!paused&&!preference.matches;
+function draw(){queued=false;if(!active())return;const vh=innerHeight;for(const el of scenes){const r=el.getBoundingClientRect();if(r.bottom<0||r.top>vh)continue;const pinned=['cinema','flight'].includes(el.dataset.motion);const top=innerWidth<=900?68:76;const p=pinned?clamp((top-r.top)/Math.max(r.height-vh+top,1)):clamp((vh-r.top)/(vh+r.height));el.style.setProperty('--p',p.toFixed(5));if(el.dataset.motion==='flight'&&innerWidth>600){panels.forEach((card,i)=>{const distance=i-p*2;card.style.setProperty('--turn',`${distance*13}deg`);card.style.setProperty('--scale',1-Math.min(Math.abs(distance),1)*.12);card.style.setProperty('--alpha',1-Math.min(Math.abs(distance),1)*.28)})}}
+if(innerWidth<=600)panels.forEach(card=>{const r=card.getBoundingClientRect();if(r.top>vh||r.bottom<0)return;const p=clamp((vh-r.top)/(vh+r.height));card.style.setProperty('--mobile-turn',`${(1-p)*8}deg`);card.style.setProperty('--mobile-scale',.9+p*.1)})}
+function schedule(){if(!queued&&!document.hidden){queued=true;requestAnimationFrame(draw)}}
+function configure(){document.documentElement.classList.toggle('motion-ready',active());scenes.forEach(e=>e.style.removeProperty('--p'));panels.forEach(e=>e.removeAttribute('style'));if(button){button.hidden=false;button.disabled=preference.matches;button.textContent=preference.matches?'Reduced motion':paused?'Play motion':'Pause motion';button.setAttribute('aria-pressed',String(paused||preference.matches))}schedule()}
+button?.addEventListener('click',()=>{paused=!paused;try{sessionStorage.setItem('lavish-v4-motion',paused?'paused':'playing')}catch{}configure()});
+panels.forEach((card,i)=>card.addEventListener('focus',()=>{if(!active()||innerWidth<=600)return;const section=card.closest('.gallery-flight');const top=innerWidth<=900?68:76;scrollTo({top:scrollY+section.getBoundingClientRect().top-top+(section.offsetHeight-innerHeight+top)*(i/2),behavior:'instant'})}));
+addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});document.addEventListener('visibilitychange',schedule);preference.addEventListener('change',configure);configure();})();

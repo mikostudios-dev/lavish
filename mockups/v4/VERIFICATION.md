@@ -11,3 +11,10 @@ Chrome headless with existing local Playwright; independently authored checks, n
 Evidence retained in the task's `output/playwright/`: results.json, interactions.json, opening/full/scene PNGs and test scripts. This folder is deliberately outside the published repo. The downloaded skill is pinned at 75d81f74e83692add18cd7a8a8e078b8a887a579.
 
 Feel check: curiosity → choice → quiet detail → spatial reveal → resolve matches the intended sequence. The event reveal carries the largest motion span; the inquiry remains stable and legible. Motion is CSS perspective on flat photography, not a 3D model of the furniture. No physical iPhone/Android or Safari testing; no claim of comprehensive accessibility certification or automated composited contrast-harness compliance. Text is placed on solid surfaces rather than photographs.
+
+## Cinematic redesign verification
+Seven-page sweep repeated at 1440×1000, 390×844, 360×640 and reduced-motion 390×844: no page errors, failed requests, broken requested images or horizontal overflow. Titles remain 28/24px.
+
+Additional motion review samples both new scenes at 0%, 25%, 50%, 75% and 100% on 1440×1000, 768×1024, 390×844 and 360×640 (40 scene samples). The hero visibly changes composition through separate translations, rotations and scale; desktop/tablet gallery changes its visible event and perspective. Mobile gallery uses static document order with mild image depth instead of sticky lateral movement. Assertions verified motion pause, persistence after reload, resume, automatic system reduced-motion changes, and keyboard focus bringing the third desktop gallery item into view. All passed. A title overlap during hero expansion was found in visual review and corrected by giving the heading its own opaque top plane. Foreground photo labels fade early to avoid overlapping the fixed caption as those photos leave.
+
+Evidence: `output/playwright/redesign-results.json`, `motion-review.json`, and `revised-*` scene screenshots in the task workspace. Previous upstream execution and physical-device limitations still apply. The revised source, rather than the first version's captures, is the current design.
