@@ -5,6 +5,25 @@ function draw(){queued=false;if(paused||preference.matches)return;for(const el o
 function schedule(){if(!queued&&!document.hidden){queued=true;requestAnimationFrame(draw)}}
 function configure(){document.documentElement.classList.toggle('gentle-motion',!paused&&!preference.matches);if(button){button.hidden=false;button.disabled=preference.matches;button.textContent=preference.matches?'Reduced motion':paused?'Play motion':'Pause motion';button.setAttribute('aria-pressed',String(paused||preference.matches))}schedule()}
 button?.addEventListener('click',()=>{paused=!paused;try{sessionStorage.setItem('lavish-v4-motion',paused?'paused':'playing')}catch{}configure()});preference.addEventListener('change',configure);addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});document.addEventListener('visibilitychange',schedule);configure();
-const hero=document.querySelector('#showroom-image'),settings={lounge:['hero-lounge','Sage sofa and ivory lounge chairs around black occasional tables'],dining:['tables','White dining tables with natural wood chairs'],outdoor:['outdoor','Outdoor lounge furniture with ivory cushions']};let sequence=0;
-document.querySelectorAll('[data-setting]').forEach(control=>control.addEventListener('click',()=>{const current=++sequence,item=settings[control.dataset.setting];const preview=new Image();preview.onload=()=>{if(current!==sequence)return;hero.src=preview.src;hero.alt=item[1];document.querySelectorAll('[data-setting]').forEach(b=>b.setAttribute('aria-pressed',String(b===control)))};preview.src='../../assets/'+item[0]+'.webp'}));
+const hero=document.querySelector('#showroom-image');
+if(hero){
+ const settings={lounge:['hero-lounge','Sage sofa and ivory lounge chairs around black occasional tables'],seating:['seating','Lavish dining chairs and curved upholstered seating'],dining:['tables','White dining tables with natural wood chairs'],bars:['bars','Lavish bars and back bar furniture'],misc:['accents','Lavish decorative accents and event accessories'],outdoor:['outdoor','Outdoor lounge furniture with ivory cushions'],tableware:['tableware','Lavish tableware and place settings'],groups:['lounge-group','A coordinated Lavish lounge furniture grouping']};
+ const controls=[...document.querySelectorAll('[data-setting]')],links=[...document.querySelectorAll('.category-nav a')],keys=['seating','dining','bars','misc','outdoor','tableware','groups'],cache=new Map();
+ const overlay=hero.cloneNode();overlay.removeAttribute('id');overlay.removeAttribute('fetchpriority');overlay.alt='';overlay.setAttribute('aria-hidden','true');overlay.className='showroom-transition';hero.after(overlay);
+ let sequence=0,current='lounge',fade;
+ function load(key){if(!cache.has(key)){cache.set(key,new Promise(resolve=>{const image=new Image();image.onload=async()=>{try{await image.decode()}catch{}resolve(image)};image.onerror=()=>{cache.delete(key);resolve(null)};image.src='../../assets/'+settings[key][0]+'.webp'}))}return cache.get(key)}
+ async function preview(key){const request=++sequence;const image=await load(key);if(request!==sequence||!image)return;
+  controls.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.setting===key)));
+  links.forEach((link,i)=>link.classList.toggle('is-previewing',keys[i]===key));
+  if(current===key)return;
+  fade?.cancel();overlay.src=hero.src;hero.src=image.src;hero.alt=settings[key][1];current=key;
+  if(!preference.matches&&!paused)fade=overlay.animate([{opacity:1},{opacity:0}],{duration:260,easing:'ease-out'});
+ }
+ controls.forEach(control=>control.addEventListener('click',()=>preview(control.dataset.setting)));
+ links.forEach((link,i)=>{link.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'||event.pointerType==='pen')preview(keys[i])});link.addEventListener('focus',()=>{if(link.matches(':focus-visible'))preview(keys[i])})});
+ preference.addEventListener('change',()=>{if(preference.matches)fade?.cancel()});button?.addEventListener('click',()=>{if(paused)fade?.cancel()});
+ // Keep the current image visible until the next is decoded. Warm desktop previews after the initial page load.
+ function warm(){if(matchMedia('(hover: hover) and (pointer: fine)').matches)Object.keys(settings).forEach(load)}
+ if(document.readyState==='complete')warm();else addEventListener('load',warm,{once:true});
+}
 if(location.pathname.endsWith('seating.html')||location.pathname.endsWith('product-abundant-chair.html'))document.querySelector('.category-nav a')?.setAttribute('aria-current','page');})();
