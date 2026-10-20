@@ -5,7 +5,7 @@
   document.querySelectorAll('.desktop-nav a,.mobile-menu a').forEach(a=>{if(a.getAttribute('href')===page)a.setAttribute('aria-current','page')});
   const interest=new URLSearchParams(location.search).get('interest');
   const needs=document.querySelector('#needs');
-  const allowed=['Tables','Bars & DJ booths','Outdoor','Tableware','Décor & accents'];
+  const allowed=['Tables','Bars & DJ booths','Outdoor','Tableware','Décor & accents','Groups'];
   if(needs&&allowed.includes(interest))needs.value='Interested in: '+interest+'.';
   const dialog=document.querySelector('#category-preview');
   if(!dialog)return;

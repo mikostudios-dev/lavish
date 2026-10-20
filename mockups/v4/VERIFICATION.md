@@ -1,4 +1,16 @@
-# Verification · 20 October 2026
+# Current identity-led revision · 20 October 2026
+
+Current QA in Chrome on the iMac through browser controls, after visual inspection of the real Lavish home, seating, Abundant Chair, about and gallery pages. The historical results below refer to earlier rejected designs and are not claims about this revision.
+
+- Seven pages at widths 1440, 768, 390 and 360px (height 900px): 28 checks, no horizontal document overflow or broken completed images. H1 is 28px desktop/tablet and 24px phone. Desktop and phone screenshots inspected.
+- Home setting selection updates the real photograph, description and pressed state. Mobile menu and Escape, category preview and Escape, catalog search for Abundant, quantity 2 added to quote, local quote preview with fictitious test details, and removal of the test item passed. Nothing was submitted externally.
+- Motion pause removes the transform, persists after reload and resumes. System reduced-motion CSS and matchMedia override were reviewed; OS/browser reduced-motion emulation was not completed in this revision. No claim of a fresh emulation pass. The controls use native buttons and dialogs; keyboard Escape paths checked.
+- Browser error log was empty. Local HTML href/src file references passed. No unfamiliar repository software or scripts were installed or run. No physical phone or Safari verification.
+- Evidence outside the repository: output/playwright/essence-desktop.jpg. Shared selector and screenshot assets are unchanged by this revision.
+
+---
+
+# Historical verification · superseded designs · 20 October 2026
 
 Chrome headless with existing local Playwright; independently authored checks, no downloaded scroll-craft scripts. Native pointer lock/capture disabled in test contexts.
 

@@ -1,10 +1,9 @@
-# Lavish concept 04
+# Lavish concept 04 · Modern showroom
 
-Independent image-first gallery concept at `mockups/v4/`. See `BRIEF.md` for the requested scroll-craft skill application and explicit execution boundary, and `VERIFICATION.md` for checks.
+Identity-led redesign after reviewing the actual Lavish website in the iMac browser. See SOURCE-AUDIT.md for observed evidence and preserved details. The latest user direction supersedes the earlier cinematic variants, which remain recoverable in git.
 
-Uses existing local Lavish assets and content. `v4.css` and `v4.js` provide the distinct composition and motion; the copied v2 foundation preserves the catalog, product, gallery and local inquiry behaviors. No external libraries, analytics, generated assets, network submissions or public prices.
+Seven pages, existing local imagery and source-backed catalog data. White/gray/yellow, left-hand rental categories, original logo, a user-controlled featured-setting photograph, modest typography and restrained native-flow motion. Phone layout uses a compact header and accessible menu. Pause persists for the session; reduced motion takes priority.
 
-Preview from repository root: `python3 -m http.server 8768 --bind 127.0.0.1`, then `/mockups/v4/`. Quote storage is isolated as `lavish-quote-v4`. Physical phone testing remains separate from browser viewport emulation.
+Catalog, product detail, gallery, About, Contact and local quote preview/download remain functional. No public prices, real submissions, reservations, new external services or client live-site changes. Non-seating categories retain previews/contact rather than fabricated full catalogs. V4 quote storage is isolated. Photography remains at its supplied source resolution.
 
-## Cinematic redesign
-The revised v4 replaces the opening with a pinned three-plane photographic installation, gives the chair more dimensional travel and introduces a dark horizontal event-photo journey. On phones the gallery flows vertically. A visible Pause motion / Play motion control remembers the choice for the session. Reduced-motion preference overrides it. No fifth concept or selector changes are included.
+Serve repository root with a local HTTP server; entry is `/mockups/v4/`. Current checks and limitations are in VERIFICATION.md; earlier design choices in BRIEF.md are historical and explicitly superseded by SOURCE-AUDIT.md.
