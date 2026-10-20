@@ -16,3 +16,5 @@ html{scroll-behavior:auto;scroll-padding-top:30px}.lavish-site{--paper:#fff;--in
 @media(min-width:1101px){.lavish-site .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 .showroom-photo{position:relative}.showroom-photo .showroom-transition{position:absolute;inset:0;height:100%;opacity:0;pointer-events:none}.category-nav a.is-previewing::after{content:"";position:absolute;bottom:4px;right:0;width:30px;height:2px;background:var(--yellow)}
+
+.showroom-photo{display:block}.showroom-controls{justify-content:flex-end}
