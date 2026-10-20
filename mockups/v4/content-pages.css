@@ -1,0 +1,56 @@
+/* Reusable presentation templates: Gallery, About and Contact. */
+.lavish-site .inner-shell{max-width:1600px;margin:auto;padding:28px 4.2% 0}
+.lavish-site .inner-breadcrumbs{display:flex;gap:12px;font-size:13px;color:var(--muted)}
+
+.lavish-site .inner-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:10%;align-items:end;padding:48px 0 60px;border-bottom:1px solid var(--line)}
+.lavish-site .inner-hero h1{font-size:clamp(58px,6.2vw,90px);line-height:1.04;margin-top:23px;max-width:850px}
+.lavish-site .inner-lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:430px;margin-bottom:5px}
+.lavish-site .gallery-topline{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:30px 0}
+.lavish-site .gallery-topline p{font-size:15px;color:var(--muted)}
+
+.lavish-site .masonry-gallery{columns:3;column-gap:24px;padding-bottom:32px}
+.lavish-site .gallery-card{break-inside:avoid;display:inline-block;width:100%;margin:0 0 27px;vertical-align:top}
+.lavish-site .gallery-tile{position:relative;display:block;width:100%;border:0;padding:0;background:transparent;cursor:zoom-in}
+.lavish-site .gallery-tile img{width:100%;height:auto}
+.lavish-site .gallery-tile .circle-arrow{position:absolute;right:12px;bottom:12px;background:var(--paper);opacity:0;transition:opacity .2s,background .2s}
+.lavish-site .gallery-tile:hover .circle-arrow,.lavish-site .gallery-tile:focus-visible .circle-arrow{opacity:1;background:var(--yellow)}
+.lavish-site .gallery-card figcaption{font-size:14px;line-height:1.4;margin-top:12px}
+.lavish-site .inner-callout{display:flex;justify-content:space-between;align-items:center;gap:40px;border-top:1px solid var(--line);padding:54px 0;margin-top:45px}
+.lavish-site .inner-callout h2{margin-top:17px;font-size:clamp(38px,4vw,58px)}
+.lavish-site .gallery-lightbox{width:calc(100% - 48px);max-width:1200px;padding:24px;border:0;background:var(--paper);color:var(--ink)}
+.lavish-site .gallery-lightbox>img{max-width:100%;max-height:68dvh;width:auto;height:auto;margin:auto;object-fit:contain}
+.lavish-site .lightbox-details{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;padding-top:21px}
+.lavish-site .lightbox-details h2{font-size:32px;letter-spacing:-.025em}
+.lavish-site .lightbox-details p{font-size:12px;color:var(--muted);max-width:650px;margin-top:9px;line-height:1.6}
+.lavish-site .lightbox-details .text-link{font-size:12px;min-height:36px;padding:7px 0;margin-top:4px}
+.lavish-site .lightbox-controls{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.lavish-site .lightbox-controls button{width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:22px}
+.lavish-site .lightbox-controls button:hover{background:var(--yellow)}
+.lavish-site .lightbox-controls span{font-size:12px;min-width:40px;text-align:center}
+.lavish-site .about-story{display:grid;grid-template-columns:1.05fr 1fr;gap:7%;align-items:center;margin:64px 0}
+.lavish-site .about-story figure img{width:100%;height:auto;aspect-ratio:1.15;object-fit:cover}
+.lavish-site .about-story figcaption{font-size:9px;letter-spacing:.14em;background:#dfdfdf;padding:15px 18px}
+.lavish-site .about-story h2{font-size:clamp(38px,4vw,58px);margin-top:20px}
+.lavish-site .about-story p:not(.eyebrow){font-size:16px;line-height:1.75;margin:20px 0;color:var(--muted)}
+.lavish-site .about-story .button{margin-top:8px}
+.lavish-site .about-notes{display:grid;grid-template-columns:1.05fr 1fr;gap:7%;padding:50px 0 15px;border-top:1px solid var(--line)}
+.lavish-site .about-notes h2{font-size:clamp(38px,3.8vw,54px);margin-top:20px}
+.lavish-site .about-notes>div>p:not(.eyebrow){font-size:17px;line-height:1.75;color:var(--muted);margin-bottom:18px}
+.lavish-site .contact-locations{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+.lavish-site .contact-locations article{border:1px solid var(--line);padding:34px}
+.lavish-site .contact-locations h2{font-size:54px;margin:18px 0}
+.lavish-site .location-phone{display:inline-block;font-size:28px;line-height:1.3;margin-bottom:24px}
+
+.lavish-site .contact-locations address{color:var(--ink);font-style:normal;font-size:16px;line-height:1.7}
+.lavish-site .appointment-note{font-size:12px;color:var(--muted);margin-top:18px}
+.lavish-site .contact-email{grid-column:1/-1;display:flex;gap:28px;align-items:center;padding:12px 0 30px;border-bottom:1px solid var(--line)}
+.lavish-site .contact-email>span{font-size:10px;letter-spacing:.12em}
+.lavish-site .contact-email .text-link{font-size:clamp(16px,2vw,24px)}
+.lavish-site .contact-inquiry{padding:64px 0 85px}
+.lavish-site .approach-copy .approach-about-link{margin-top:16px}
+.lavish-site .contact-page-link{margin:0 0 5px}
+.lavish-site .desktop-nav a[aria-current=page]::after{right:0}
+.lavish-site .mobile-menu a[aria-current=page]{border-bottom-color:var(--ink)}
+@media(max-width:1000px){.lavish-site .masonry-gallery{columns:2}.lavish-site .inner-hero{gap:6%}.lavish-site .inner-hero h1{font-size:64px}.lavish-site .about-story,.lavish-site .about-notes{gap:5%}.lavish-site .about-story h2{font-size:40px}}
+@media(max-width:640px){.lavish-site .inner-shell{padding:23px 20px 0}.lavish-site .inner-breadcrumbs{font-size:12px}.lavish-site .inner-hero{display:block;padding:36px 0 34px}.lavish-site .inner-hero h1{font-size:clamp(48px,12vw,66px);margin-top:19px}.lavish-site .inner-lead{font-size:16px;margin-top:25px;max-width:none}.lavish-site .gallery-topline{display:block;padding:24px 0}.lavish-site .gallery-topline p{font-size:14px}.lavish-site .masonry-gallery{column-gap:14px}.lavish-site .gallery-card{margin-bottom:23px}.lavish-site .gallery-card figcaption{font-size:12px;margin-top:10px}.lavish-site .gallery-tile .circle-arrow{right:8px;bottom:8px;width:28px;height:28px;font-size:18px;opacity:1}.lavish-site .inner-callout{display:block;margin-top:25px;padding:35px 0 44px}.lavish-site .inner-callout .button{margin-top:25px}.lavish-site .gallery-lightbox{width:calc(100% - 24px);padding:12px}.lavish-site .gallery-lightbox>img{max-height:52dvh}.lavish-site .lightbox-details{display:block;padding:18px 4px 4px}.lavish-site .lightbox-details h2{font-size:26px}.lavish-site .lightbox-controls{justify-content:flex-end;margin-top:18px}.lavish-site .about-story{display:block;margin:35px 0}.lavish-site .about-story>div{margin-top:32px}.lavish-site .about-story figure img{aspect-ratio:1.25}.lavish-site .about-story h2{font-size:41px}.lavish-site .about-notes{display:block;padding-top:35px}.lavish-site .about-notes>div+div{margin-top:25px}.lavish-site .about-notes>div>p:not(.eyebrow){font-size:16px}.lavish-site .contact-locations{grid-template-columns:1fr;margin-top:30px;gap:18px}.lavish-site .contact-locations article{padding:26px}.lavish-site .contact-locations h2{font-size:48px}.lavish-site .location-phone{font-size:26px}.lavish-site .contact-email{display:block;padding:10px 0 25px}.lavish-site .contact-email>span{display:block;margin:6px 0}.lavish-site .contact-inquiry{padding:40px 0 45px}}
+@media(hover:none){.lavish-site .gallery-tile .circle-arrow{opacity:1}}
