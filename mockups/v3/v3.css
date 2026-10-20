@@ -1,0 +1,188 @@
+/* Concept 03 — a separate, image-first spatial presentation. */
+.concept-three {
+  --heading-serif: var(--sans);
+  --paper: #fff; --ink: #171717; --muted: #626262; --line: #e6e6e6;
+  --title-size: clamp(24px, 2vw, 28px);
+  --section-title-size: clamp(20px, 1.6vw, 22px);
+  --support-title-size: 20px;
+  background: #fff; font-size: 15px;
+}
+.concept-three h1,.concept-three h2 { font-weight: 500; letter-spacing: -.035em; }
+.concept-three h1 em,.concept-three h2 em,.concept-three .footer-statement em { font-style:normal; }
+.concept-three .eyebrow {font-size:9px;letter-spacing:.13em;color:#666;}
+.concept-three .concept-bar {display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 4.2%;min-height:38px;background:#f5f5f7;color:#595959;font-size:10px;letter-spacing:.04em;}
+.concept-three .concept-bar a,.concept-three .concept-bar button {display:inline-flex;align-items:center;min-height:38px;}
+.concept-three .concept-bar button {border:0;background:transparent;color:inherit;font:inherit;padding:0;cursor:pointer;}
+.concept-three .concept-bar button[hidden] {display:none;}
+.concept-three .concept-bar button:disabled {cursor:default;}
+.concept-three .site-header {min-height:78px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid #eee;}
+.concept-three .brand,.concept-three .brand img {width:102px;}
+.concept-three .desktop-nav {font-size:12px;gap:30px;}
+.concept-three .site-header a {text-transform:none;}
+.concept-three .button {font-size:12px;min-height:44px;border-radius:999px;padding:12px 21px;gap:15px;}
+.concept-three .header-cta {background:#171717;color:#fff;font-size:11px;}
+.concept-three .text-link {font-size:12px;gap:16px;min-height:44px;}
+.concept-three .text-link>span {font-size:17px;}
+.concept-three .menu-toggle {font-size:11px;}
+.concept-three .mobile-menu a {font-size:16px;}
+.concept-three .spatial-intro {max-width:1680px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:30px;padding:42px 4.2% 30px;}
+.concept-three .spatial-intro h1 {font-size:var(--title-size);line-height:1.25;margin-top:12px;}
+.concept-three .spatial-hero {margin:0 2%;}
+.concept-three .image-window {overflow:hidden;border-radius:18px;background:#f5f5f7;}
+.concept-three .spatial-hero .image-window {height:min(70vw,720px);min-height:380px;}
+.concept-three .image-window img {width:100%;height:100%;object-fit:cover;}
+.concept-three .spatial-hero img {object-position:50% 54%;}
+.concept-three .spatial-hero figcaption {padding:18px 2.3%;display:flex;justify-content:space-between;gap:24px;font-size:11px;}
+.concept-three .spatial-hero figcaption>span:last-child {font-size:9px;letter-spacing:.1em;color:#666;}
+.concept-three .spatial-collection,.concept-three .spatial-scenes {max-width:1680px;margin:auto;padding:100px 4.2%;}
+.concept-three .section-caption {display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px;}
+.concept-three .section-caption h2 {font-size:var(--section-title-size);line-height:1.35;margin-top:10px;}
+.concept-three .section-caption>p {font-size:13px;color:var(--muted);}
+.concept-three .edit-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px;}
+.concept-three .edit-card:nth-child(-n+2) {grid-column:auto;}
+.concept-three .edit-image,.concept-three .edit-card:nth-child(-n+2) .edit-image {aspect-ratio:1.13;border-radius:14px;}
+.concept-three .edit-label {font-size:13px;padding-top:14px;}
+.concept-three .edit-label>span:last-child {font-size:17px;}
+.concept-three .object-story {display:grid;grid-template-columns:30% 70%;align-items:center;gap:0;margin:0 2%;background:#f5f5f7;border-radius:18px;overflow:hidden;}
+.concept-three .object-copy {padding:50px 0 50px 14%;position:relative;z-index:1;}
+.concept-three .object-copy h2 {font-size:22px;line-height:1.3;margin:14px 0 22px;}
+.concept-three .object-copy>p:not(.eyebrow) {font-size:14px;line-height:1.8;color:#666;margin-bottom:22px;}
+.concept-three .object-stage {background:#f5f5f7;height:650px;position:relative;display:flex;align-items:center;justify-content:center;perspective:1200px;}
+.concept-three .object-orbit {position:absolute;width:66%;aspect-ratio:1;border:1px solid #dedee2;border-radius:50%;background:radial-gradient(circle,#e9e9ec,transparent 68%);}
+.concept-three .object-surface {position:relative;display:block;width:92%;mix-blend-mode:multiply;transform-origin:50% 55%;}
+.concept-three .object-surface img {width:100%;height:auto;filter:drop-shadow(0 30px 15px #0000000a);}
+.concept-three .object-caption {position:absolute;bottom:25px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:.13em;color:#666;}
+.concept-three .scene-composition {display:grid;grid-template-columns:1fr 28%;gap:4%;align-items:center;perspective:1500px;padding:24px 0;}
+.concept-three .scene-primary {perspective:1500px;}
+.concept-three .scene-detail {margin-top:140px;perspective:1500px;}
+.concept-three .scene-composition img {width:100%;height:auto;border-radius:14px;}
+.concept-three .scene-composition figcaption {margin:18px 0 0;font-size:11px;line-height:1.6;}
+.concept-three .scene-composition figcaption span {color:#777;font-size:10px;}
+.concept-three .spatial-outdoor {margin:0 2%;}
+.concept-three .spatial-outdoor .image-window {height:580px;}
+.concept-three .outdoor-caption {display:flex;justify-content:space-between;align-items:end;gap:24px;padding:28px 2.3%;}
+.concept-three .outdoor-caption h2 {font-size:22px;margin-top:10px;line-height:1.3;}
+.concept-three .spatial-process {padding:100px 8%;display:grid;grid-template-columns:1fr 1fr;gap:15%;}
+.concept-three .spatial-process h2 {font-size:22px;margin:16px 0 22px;}
+.concept-three .spatial-process ol {list-style:none;margin:0;padding:0;}
+.concept-three .spatial-process li {display:flex;gap:26px;padding:20px 0;border-top:1px solid var(--line);}
+.concept-three .spatial-process li>span {font-size:10px;color:#888;padding-top:4px;}
+.concept-three .spatial-process h3 {font-size:15px;line-height:1.4;margin-bottom:8px;font-weight:500;}
+.concept-three .spatial-process li p {font-size:13px;color:#666;max-width:350px;}
+/* The same quiet visual language continues through the complete inquiry journey. */
+.concept-three .inner-shell,.concept-three .product-shell,.concept-three .quote-shell {max-width:1440px;}
+.concept-three .inner-hero {padding:35px 0 40px;gap:6%;}
+.concept-three .inner-hero h1 {margin-top:16px;}
+.concept-three .inner-lead,.concept-three .quote-intro,.concept-three .catalog-intro .intro-text {font-size:14px;line-height:1.7;}
+.concept-three .inner-breadcrumbs,.concept-three .breadcrumbs {font-size:11px;}
+.concept-three .catalog-intro {padding-block:30px 40px;max-width:1440px;margin:auto;grid-template-columns:1fr 55%;}
+.concept-three .catalog-intro img {border-radius:14px;aspect-ratio:2.2;}
+.concept-three .catalog-intro h1 {margin-block:16px;}
+.concept-three .catalog-context {padding:24px 0;}
+.concept-three .catalog-context p {font-size:13px;}
+.concept-three .catalog {max-width:1440px;margin:auto;}
+.concept-three .product-photo {border:0;border-radius:14px;overflow:hidden;background:#f5f5f7;}
+.concept-three .product-grid {gap:36px 24px;}
+.concept-three .product-name {font-size:14px;line-height:1.4;}
+.concept-three .filter-button {border-radius:999px;font-size:11px;padding:10px 15px;}
+.concept-three .catalog-tools {gap:15px;}
+.concept-three .attribute-filters label {font-size:10px;}
+.concept-three .attribute-filters select,.concept-three .catalog-search {border-radius:8px;}
+.concept-three .gallery-main {border-radius:18px;overflow:hidden;background:#f5f5f7;}
+.concept-three .product-information h1 {margin:18px 0;}
+.concept-three .product-description {font-size:14px;}
+.concept-three .product-specs>div {font-size:12px;}
+.concept-three .product-next h2 {font-size:20px;}
+.concept-three .product-thumbnails button {border-radius:8px;}
+.concept-three .masonry-gallery {columns:2;column-gap:32px;padding-top:10px;}
+.concept-three .gallery-card:nth-child(2) {padding-top:70px;}
+.concept-three .gallery-tile img {border-radius:12px;}
+.concept-three .gallery-card figcaption {font-size:12px;}
+.concept-three .about-story figure img {border-radius:16px;}
+.concept-three .about-story figure {perspective:1500px;}
+.concept-three .about-story figcaption {background:transparent;padding:14px 0;font-size:9px;}
+.concept-three .about-story p:not(.eyebrow),.concept-three .about-notes>div>p:not(.eyebrow) {font-size:14px;}
+.concept-three .contact-locations article,.concept-three .quote-form,.concept-three .quote-empty {border-radius:16px;background:#f5f5f7;}
+.concept-three .contact-locations h2 {font-size:20px;}
+.concept-three .location-phone {font-size:20px;}
+.concept-three .contact-locations address {font-size:14px;}
+.concept-three .field input,.concept-three .field textarea {font-size:14px;border-radius:6px;}
+.concept-three .quote-row h3 {font-size:16px;}
+.concept-three .site-footer {background:#f5f5f7;color:#171717;padding:45px 4.2% 0;}
+.concept-three .footer-top,.concept-three .footer-grid,.concept-three .footer-bottom {border-color:#ddd;}
+.concept-three .footer-statement {font-family:var(--sans);font-size:20px;line-height:1.4;}
+.concept-three .footer-grid p,.concept-three .footer-grid address,.concept-three .footer-bottom {color:#666;}
+.concept-three .footer-grid h3 {color:#171717;}
+.concept-three .footer-brand,.concept-three .footer-brand img {filter:none;}
+.concept-three .footer-phone {font-size:18px;}
+.concept-three .site-footer .button {background:#ebe65b;color:#171717;}
+.concept-three dialog {border-radius:16px;}
+.concept-three :focus-visible {outline:2px solid #756800;outline-offset:5px;}
+/* Motion uses only transforms. Content remains visible with JavaScript disabled. */
+.concept-three [data-motion] .motion-surface {transform:var(--motion-transform,none);}
+.concept-three [data-motion="panorama"] .motion-surface {transform:translate3d(0,var(--motion-y,0px),0) scale(1.06);}
+.concept-three[data-motion-paused] [data-motion] .motion-surface {transform:none;}
+@media(max-width:1000px) {
+  .concept-three .object-story {grid-template-columns:35% 65%;}
+  .concept-three .object-stage {height:480px;}
+  .concept-three .spatial-collection,.concept-three .spatial-scenes {padding-block:70px;}
+  .concept-three .spatial-process {gap:8%;padding-inline:5%;}
+}
+@media(max-width:640px) {
+  .concept-three .concept-bar {padding:0 20px;font-size:9px;gap:10px;}
+  .concept-three .site-header {min-height:70px;}
+  .concept-three .brand,.concept-three .brand img {width:90px;}
+  .concept-three .spatial-intro {display:block;padding:28px 20px 20px;}
+  .concept-three .spatial-intro h1 {max-width:310px;font-size:24px;line-height:1.3;}
+  .concept-three .spatial-intro .text-link {margin-top:10px;}
+  .concept-three .spatial-hero,.concept-three .spatial-outdoor {margin:0 12px;}
+  .concept-three .image-window {border-radius:12px;}
+  .concept-three .spatial-hero .image-window {height:440px;min-height:0;}
+  .concept-three .spatial-hero img {object-position:57% center;}
+  .concept-three .spatial-hero figcaption {padding:14px 8px;gap:10px;font-size:10px;}
+  .concept-three .spatial-hero figcaption>span:last-child {font-size:8px;max-width:80px;text-align:right;}
+  .concept-three .spatial-collection,.concept-three .spatial-scenes {padding:55px 20px;}
+  .concept-three .section-caption {display:block;margin-bottom:22px;}
+  .concept-three .section-caption>p {font-size:12px;margin-top:12px;}
+  .concept-three .section-caption>.text-link {margin-top:12px;}
+  .concept-three .edit-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px;}
+  .concept-three .edit-card:first-child {grid-column:span 2;}
+  .concept-three .edit-card:last-child {grid-column:span 2;}
+  .concept-three .edit-image,.concept-three .edit-card:nth-child(-n+2) .edit-image {aspect-ratio:1;border-radius:10px;}
+  .concept-three .edit-card:first-child .edit-image,.concept-three .edit-card:last-child .edit-image {aspect-ratio:1.65;}
+  .concept-three .edit-label {font-size:12px;}
+  .concept-three .object-story {display:flex;flex-direction:column;margin:0 12px;border-radius:12px;}
+  .concept-three .object-copy {padding:30px 24px 0;align-self:stretch;}
+  .concept-three .object-copy h2 {font-size:20px;margin:12px 0;}
+  .concept-three .object-copy>p:not(.eyebrow) {font-size:13px;margin-bottom:10px;}
+  .concept-three .object-stage {height:350px;width:100%;}
+  .concept-three .object-surface {width:100%;}
+  .concept-three .object-caption {font-size:8px;bottom:18px;}
+  .concept-three .scene-composition {grid-template-columns:1fr;gap:30px;padding:0;}
+  .concept-three .scene-detail {width:60%;margin:0 0 0 auto;}
+  .concept-three .scene-composition figcaption {font-size:10px;}
+  .concept-three .spatial-outdoor .image-window {height:380px;}
+  .concept-three .outdoor-caption {display:block;padding:24px 8px;}
+  .concept-three .outdoor-caption h2 {font-size:20px;}
+  .concept-three .outdoor-caption>.text-link {margin-top:12px;}
+  .concept-three .spatial-process {display:block;padding:45px 24px 55px;}
+  .concept-three .spatial-process h2 {font-size:20px;}
+  .concept-three .spatial-process ol {margin-top:20px;}
+  .concept-three .inner-shell {padding-top:22px;}
+  .concept-three .inner-hero {padding:25px 0 30px;}
+  .concept-three .inner-hero h1 {font-size:24px;}
+  .concept-three .catalog-intro {display:block;padding:25px 20px 30px;}
+  .concept-three .catalog-intro h1,.concept-three .product-information h1,.concept-three .quote-shell h1 {font-size:24px;}
+  .concept-three .product-grid {gap:28px 14px;}
+  .concept-three .product-name {font-size:12px;}
+  .concept-three .masonry-gallery {columns:1;}
+  .concept-three .gallery-card:nth-child(2) {padding-top:0;}
+  .concept-three .contact-locations article {padding:24px;}
+  .concept-three .site-footer {padding:35px 20px 0;}
+  .concept-three .footer-grid .footer-phone {font-size:17px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto;}
+  .concept-three [data-motion] .motion-surface {transform:none!important;}
+  .concept-three *,.concept-three *::before,.concept-three *::after {transition:none!important;animation:none!important;}
+}
